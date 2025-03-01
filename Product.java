@@ -1,25 +1,30 @@
-import java.util.Calendar;
-
 public class Product {
 
-
     private String name;
-    private int productionDate;
+    private String releaseDate;
     private String manufacturer;
     private String country;
     private double price;
-    private String bookingStatus;
-    public Product() {
+    private boolean inStock;
+    public Product(String name, String releaseDate,String manufacturer, String country, double price, boolean inStock) {
 
-        name = "Стакан";
-        productionDate = 2002;
-        manufacturer = "IKEA";
-        country = "USA";
-        price = 1.5;
-        bookingStatus = "В продаже";
-        System.out.println("Имя товара: " + name + "; Год производства: " + productionDate + "; Производитель: " + manufacturer + "; Страна производитель: " + country + "; Цена: " + price + "; Состояние бронирования" + bookingStatus);
+        this.name = name;
+        this.releaseDate = releaseDate;
+        this.manufacturer = manufacturer;
+        this.country = country;
+        this.price = price;
+        this.inStock = inStock;
+    }
 
 
-}
-
+        public String toString() {
+            return "Product{" +
+                    "name='" + name + '\'' +
+                    ", releaseDate='" + releaseDate + '\'' +
+                    ", manufacturer='" + manufacturer + '\'' +
+                    ", country='" + country + '\'' +
+                    ", price=" + price +
+                    ", inStock=" + inStock +
+                    '}';
+        }
 }
