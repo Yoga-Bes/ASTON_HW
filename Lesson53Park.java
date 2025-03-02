@@ -17,7 +17,7 @@ public class Park {
     }
 
     public void snowAttractions() {
-        System.out.println("Аттракционы в пврке '" + name + "':");
+        System.out.println("Аттракционы в парке '" + name + "':");
         for (Attraction attraction : attractions) {
             System.out.println(attraction);
         }
