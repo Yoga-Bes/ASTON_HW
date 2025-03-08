@@ -1,9 +1,13 @@
-class Triangle implements Shape {
+public class Triangle implements Shape {
 
     private double sidA;
+
     private double sidB;
+
     private double sidC;
+
     private String fillColor;
+
     private String borderColor;
 
     public Triangle(double sidA, double sidB, double sidC, String fillColor, String borderColor) {
@@ -19,19 +23,27 @@ class Triangle implements Shape {
         this.fillColor = fillColor;
         this.borderColor = borderColor;
     }
+
     private boolean isValidTriangle(double a, double b, double c) {
         return a + b > c && a + c > b && b + c > a;
     }
-    public double calculateArea() {
-        double s = calculatePerimeter() / 2;
-        return Math.sqrt(s * (s - sidA) * (s - sidB) * (s - sidC));
-        }
-        public double calculatePerimeter() {
-        return sidA + sidB + sidC;
+
+    public double getSidA() {
+        return sidA;
     }
+
+    public double getSidB() {
+        return sidB;
+    }
+
+    public double getSidC() {
+        return sidC;
+    }
+
     public String getFillColor() {
         return fillColor;
     }
+
     public String getBorderColor() {
         return borderColor;
     }

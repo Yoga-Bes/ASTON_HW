@@ -1,8 +1,11 @@
-class Rectangle  implements Shape {
+public class Rectangle  implements Shape {
 
     private double width;
+
     private double height;
+
     private String fillColor;
+
     private String borderColor;
 
     public Rectangle(double width, double height, String fillColor, String borderColor) {
@@ -15,16 +18,18 @@ class Rectangle  implements Shape {
         this.borderColor = borderColor;
     }
 
-    public double calculateArea() {
-        return width * height;
+    public double getWidth() {
+        return width;
     }
 
-    public double calculatePerimeter() {
-        return 2 * (width + height);
+    public double getHeight() {
+        return height;
     }
+
     public String getFillColor() {
         return fillColor;
     }
+
     public String getBorderColor() {
         return borderColor;
     }
