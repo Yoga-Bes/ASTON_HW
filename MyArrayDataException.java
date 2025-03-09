@@ -1,20 +1,6 @@
-public class MyArrayDataException extends Exception {
+public class MyArrayDataException extends RuntimeException {
 
-    private final int row;
-
-    private final int col;
-
-    public MyArrayDataException(String message, int row, int col) {
+    public MyArrayDataException(String message, int i, int j) {
         super(message);
-        this.row = row;
-        this.col = col;
-    }
-
-    public int getRow() {
-        return row;
-    }
-
-    public int getCol() {
-        return col;
     }
 }

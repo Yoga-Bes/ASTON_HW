@@ -24,19 +24,19 @@ public class Main {
         };
 
         try {
-            System.out.println("Сумма correctArray: " + sumArray(correctArray));
+            System.out.println("Сумма correctArray: " + SumArray.sumArray(correctArray));
         } catch (MyArraySizeException | MyArrayDataException e) {
             System.out.println(e.getMessage());
         }
 
         try {
-            System.out.println("Сумма wrongSizeArray: " + sumArray(wrongSizeArray));
+            System.out.println("Сумма wrongSizeArray: " + SumArray.sumArray(wrongSizeArray));
         } catch (MyArraySizeException | MyArrayDataException e) {
             System.out.println(e.getMessage());
         }
 
         try {
-            System.out.println("Сумма wrongDataArray: " + sumArray(wrongDataArray));
+            System.out.println("Сумма wrongDataArray: " + SumArray.sumArray(wrongDataArray));
         } catch (MyArraySizeException | MyArrayDataException e) {
             System.out.println(e.getMessage());
         }
@@ -47,25 +47,5 @@ public class Main {
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println(" Поймано ArrayIndexOutOfBoundsException: " + e.getMessage());
         }
-    }
-
-    public static int sumArray(String[][] array) throws MyArraySizeException, MyArrayDataException {
-        if (array.length != 4 || array[0].length != 4) {
-            throw new MyArraySizeException(" Неверный размер массива. Ожидается 4х4! ");
-        }
-
-        int sum = 0;
-
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                try {
-                    sum += Integer.parseInt(array[i][j]);
-                } catch (NumberFormatException e) {
-                    throw new MyArrayDataException(" Неверные данные в ячейке [" + i + "][" + j + "]", i, j);
-                }
-            }
-        }
-
-        return sum;
     }
 }
